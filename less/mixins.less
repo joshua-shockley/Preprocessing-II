@@ -1,1 +1,54 @@
-// Mixins in here
+// Mixins in here//
+
+.marginborder {
+     width: 100%;
+}
+
+.dottedbtmborder {
+    border-bottom: 1px dashed silver;
+}
+
+.centerIt {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.refit2screen {
+    @media @mobile {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.refitdiv {
+    @media @mobile {
+        width: 90%;
+        
+    }
+}
+
+.custom-button(@button-bg:#17A2B8, @width: 200px , @fontcolor: #FFFFFF){
+    display: block;
+    background-color: @button-bg;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    width: @width;
+    height: 30px;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    color: @fontcolor;
+    
+    &:hover{
+      background: silver;
+    }
+    
+    @media @mobile {
+        width: 90%;
+        height: 25px;
+        font-size: 1.5rem;
+      }
+    }
+  
